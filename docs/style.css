@@ -1,94 +1,215 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+/* Global Styles */
+* {
+    box-sizing: border-box; /* include padding and border in element's total width and height */
+    margin: 0; /* remove default margin */
+    padding: 0; /* remove default padding */
 
+}
+
+/* Body Styles */
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f6f8;
-    color: #333;
-    line-height: 1.6;
-}
+    font-family: 'Segoe UI', Arial, sans-serif; /* clean and modern font */
+    background: #fef9f9; /* very light pastel */
+    color: #2b2d42; /* dark slate */
+    line-height: 1.6; /* improve readability */
+    transition: background 0.3s, color 0.3s; /* smooth theme transitions */
 
-header {
-    background: #66a3ff;
-    color: #000000; /* Black text for maximum visibility */
-    padding: 20px;
-    text-align: center;
-    font-size: 1.8em;
-    font-weight: 700;
 }
-
-nav {
-    display: flex;
-    justify-content: center;
-    background: #333;
-    padding: 10px 0;
-}
-
-nav a {
-    color: #fff;
-    padding: 12px 18px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.3s ease;
-}
-
-nav a:hover {
-    background: #0056b3;
-    border-radius: 4px;
-}
-
-.container {
-    max-width: 1100px;
-    margin: 30px auto;
-    padding: 25px;
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    border-radius: 8px;
-}
-
-h1, h2, h3 {
-    color: #000000;
-    margin-bottom: 15px;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-.profile-section {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.profile-text {
-    flex: 3;
-    font-size: 1.1em;
-}
-
-.profile-image {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #eaeaea;
-    border: 1px solid #ccc;
-    height: 220px;
-    border-radius: 8px;
-}
-.profile-image img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
+/* Typography */
 a {
-    color: #0056b3;
-    text-decoration: none;
+    color: inherit; /* inherit color from parent */
+    text-decoration: none; /* remove underline by default */
 }
+
+/* Hover effect for links */
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* underline on hover for better UX */
 }
+
+/* Headings */
+ul {
+    list-style: disc inside; /* standard list style */
+}
+
+/* header */
+.site-header {
+    background: #a8dadc; /* pastel mint */
+    color: #2b2d42; /* dark slate */
+    padding: 20px 0; /* vertical padding */
+    position: sticky; /* stick to top on scroll */
+}
+
+/* Header Content */
+.header {
+    max-width: 1000px; /* constrain width */
+    margin: 0 auto; /* center horizontally */
+    display: flex; /* flexbox for layout */
+    align-items: center; /* center vertically */
+    justify-content: space-between; /* space between items */
+    padding: 0 20px; /* horizontal padding */
+}
+
+
+/* Profile Section */
+.profile {
+    display: flex; /* flexbox for layout */
+    align-items: center; /* center vertically */
+    gap: 15px; /* space between image and text */
+}
+
+/* Profile Image */
+.profile img {
+        width: 80px; /* fixed width */
+        height: 80px; /* fixed height */
+        max-width: 100%; /* responsive */
+        object-fit: cover; /* fills the circle without distortion */
+        border-radius: 50%; /* circular shape */
+        border: 2px solid #2b2d42; /* border color */
+}
+
+/* Main Content Area */
+.content {
+    max-width: 1000px; /* constrain width */
+    margin: 30px auto; /* center horizontally with top margin */
+    padding: 0 20px; /* horizontal padding */
+}
+
+/* Navigation Styles */
+.main-nav {
+    display: flex; /* flexbox for layout */
+    justify-content: center; /* center nav items */
+    background: #e9f5f5; /* light pastel */
+    padding: 10px 0; /* vertical padding */
+}
+
+ /* Navigation Links */
+.main-nav a {
+    margin: 0 15px; /* horizontal spacing */
+    font-weight: bold; /* bold text */
+    color: #2b2d42; /* dark slate */
+    transition: color 0.3s; /* smooth color transition */
+}
+
+ /* Hover and Active Link Styles */
+    .main-nav a:hover,
+    .main-nav a.active {
+        color: #f4a261; /* pastel coral */
+    }
+
+
+/*buttons */
+.btn {
+    padding: 10px 18px; /* increased padding for better touch targets */
+    border-radius: 12px; /* more rounded corners for a softer look */
+    font-weight: 600; /* semi-bold text */
+    cursor: pointer; /* pointer cursor on hover */
+    transition: all 0.25s ease; /* smooth transitions for hover effects */
+    border: 2px solid transparent; /* default border */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* subtle shadow */
+}
+
+/* General hover effect for all buttons */
+.btn:hover {
+     transform: translateY(-2px); /* slight lift on hover */
+     box-shadow: 0 6px 10px rgba(0,0,0,0.08); /* enhanced shadow on hover */
+}
+
+/* Primary button (mint) */
+.btn.primary {
+     background-color: #a8dadc; /* pastel mint */
+     color: #2b2d42; /* dark slate */
+     border: 2px solid #a8dadc; /* matching border */
+}
+
+ /* Hover effect for primary button */
+.btn.primary:hover {
+      background-color: #8fc5c7; /* slightly darker mint */
+      border-color: #8fc5c7; /* matching border */
+}
+
+/* Download / accent button (coral) */
+.btn.download {
+    background-color: #f4a261; /* pastel coral */
+    color: #fff; /* white text */
+    border: 2px solid #f4a261; /* matching border */
+ }
+
+ /* Hover effect for download button */
+ .btn.download:hover {
+    background-color: #e5944f; /* slightly darker coral */
+    border-color: #e5944f; /* matching border */
+ }
+
+
+/* Card section */
+.card {
+    background: white; /* soft lavender */
+    padding: 25px; /* increased padding */
+    border-radius: 10px; /* rounded corners */
+    box-shadow: 0 0 15px rgba(0,0,0,0.05); /* subtle shadow */
+    margin-bottom: 20px; /* space below each card */
+    transition: transform 0.2s, box-shadow 0.2s; /* smooth hover effects */
+}
+
+/* Hover effect for cards */
+.card:hover {
+     transform: translateY(-5px); /* slight lift on hover */
+     box-shadow: 0 0 25px rgba(0,0,0,0.2); /* enhanced shadow on hover */
+ }
+ 
+/* Card Headings */
+    .card h2 {
+        text-align: center; /* center text */
+        font-size: 2rem; /* larger font size */
+        margin-bottom: 15px; /* space below heading */
+        color: #f4a261; /* pastel coral */
+    }
+
+    .card h3 {
+        text-align: left; /* left text */
+        font-size: 1.5rem; /* medium font size */
+        margin-bottom: 10px; /* space below heading */
+        color: #a8dadc; /* pastel mint */
+    }
+
+
+/* Card Paragraphs */
+    .actions {
+        margin: 15px 0; /* vertical margin */
+        display: flex; /* flexbox for layout */
+        justify-content: center; /* center actions */
+        gap: 15px; /* space between actions */
+    }
+
+/**/
+.values {
+    display: flex; /* flexbox for layout */
+    justify-content: center; /* center values */
+    flex-wrap: wrap; /* wrap to next line if needed */
+    gap: 15px; /* space between values */
+    margin-top: 20px; /* space above values */
+    font-weight: bold; /* bold text */
+    color: #a8dadc; /* pastel mint */
+}
+
+/* CPD Section */
+.cpd {
+    margin-bottom: 25px; /* space below each section */
+}
+    .cpd h2 {
+        color: #f4a261; /* pastel coral */
+        margin-bottom: 10px; /* space below main headings */
+    }
+    .cpd h3 {
+        color: #a8dadc; /* pastel mint */
+        margin-bottom: 5px; /* space below subheadings */
+    }
+
+    /* Footer Styles */
+    .footer {
+        background: #a8dadc; /* pastel mint footer */
+        color: #2b2d42; /* dark slate text */
+        padding: 20px 0; /* vertical padding */
+        text-align: center; /* center text */
+
+    }
