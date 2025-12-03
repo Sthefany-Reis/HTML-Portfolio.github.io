@@ -1,2 +1,2 @@
 # HTML-Portfolio
-Creation of a personalised portfolio
+Creation of a personalised professional portfolio
