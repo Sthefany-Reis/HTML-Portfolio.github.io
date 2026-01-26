@@ -173,6 +173,7 @@ ul {
     }
 
 
+
 /* Card Paragraphs */
     .actions {
         margin: 15px 0; /* vertical margin */
@@ -203,6 +204,10 @@ ul {
     .cpd h3 {
         color: #a8dadc; /* pastel mint */
         margin-bottom: 5px; /* space below subheadings */
+    }
+    .cpd h4{
+        color: #f4a261; /* pastel coral */
+        margin-bottom: 5px; /* space below main headings */
     }
 
     /* Footer Styles */
